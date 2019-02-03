@@ -1,0 +1,15 @@
+{
+    "name": "Contas UI",
+    "short_name": "Contas UI",
+    "lang": "pt-BR",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#384A58",
+    "icons": [
+      {
+        "src": "/images/icon-512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }

@@ -1,0 +1,24 @@
+<ng-include src="'views/_top_bar.html'"></ng-include>
+<ng-include src="'views/_drawer.html'"></ng-include>
+
+<main>
+
+  <ul class="mdc-list mdc-list--three-line" aria-orientation="vertical">
+    <li ng-repeat="p in contas.lista | filter: contas.search">
+      <div class="mdc-list-item"  mdc-ripple>
+        <!-- <span class="mdc-list-item__graphic material-icons">description</span> -->
+        <span class="mdc-list-item__text">
+          <span class="mdc-list-item__primary-text"><b>{{p.nome}}</b></span>
+          <span class="mdc-list-item__secondary-text">Pagamento: {{p.dataPagamento}}</span>
+          <span class="mdc-list-item__secondary-text">Em atraso: {{p.qtdeDiasAtraso}} dias</span>
+          <span class="mdc-list-item__secondary-text">Valor Corrigido: R$ {{p.valorCorrigido}}</span>
+        </span>
+      </div>
+      <hr class="mdc-list-divider">
+    </li>
+  </ul>
+
+  <a class="mdc-fab app-fab--absolute" aria-label="Aidicionar" ui-sref="contas-add" mdc-ripple>
+    <span class="mdc-fab__icon material-icons">add</span>
+  </a>
+</main>

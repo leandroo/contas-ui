@@ -1,0 +1,52 @@
+<html ng-app="app" ng-cloak>
+ <head>
+  <meta charset="UTF-8">
+
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Contas UI">
+  <meta name="apple-mobile-web-app-title" content="Contas UI">
+  <meta name="theme-color" content="#384A58">
+  <meta name="msapplication-navbutton-color" content="#384A58">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="msapplication-starturl" content="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" type="image/png" sizes="512x512" href="/images/icon-512.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="/images/icon-512.png">
+  <link rel="apple-touch-startup-image" type="image/png" sizes="750x1334" href="/images/splash-750.png">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="/bundle.css">
+  <script src="/bundle.js" async></script>
+  <base href="/">
+  <title>Contas UI</title>
+ </head>
+ <body class="mdc-typography">
+
+  <div class="ui-view-container">
+    <div role="progressbar" class="app-linear-progress mdc-linear-progress mdc-linear-progress--indeterminate ng-hide">
+      <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+        <span class="mdc-linear-progress__bar-inner"></span>
+      </div>
+      <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+        <span class="mdc-linear-progress__bar-inner"></span>
+      </div>
+    </div>
+
+    <div class="mdc-snackbar" aria-live="assertive" aria-atomic="true" aria-hidden="true">
+      <div class="mdc-snackbar__text"></div>
+      <div class="mdc-snackbar__action-wrapper">
+        <button type="button" class="mdc-snackbar__action-button"></button>
+      </div>
+    </div>
+
+    <ui-view></ui-view>
+  </div>
+
+ </body>
+</html>

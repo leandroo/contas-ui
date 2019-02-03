@@ -1,0 +1,49 @@
+<ng-include src="'views/_top_bar.html'"></ng-include>
+<ng-include src="'views/_drawer.html'"></ng-include>
+
+<main>
+  
+  <form name="form"> 
+    <div class="mdc-form-field">
+      <div class="mdc-text-field mdc-text-field--box mdc-text-field--with-trailing-icon mdc-text-field--fullwidth" mdc-text-field>
+        <input type="text"  class="mdc-text-field__input" ng-model="contas.form.nome" required>
+        <label class="mdc-floating-label">Nome</label>
+        <div class="mdc-line-ripple"></div>
+      </div>
+    </div>
+
+    <div class="mdc-form-field">
+      <div class="mdc-text-field mdc-text-field--box mdc-text-field--with-trailing-icon mdc-text-field--fullwidth" mdc-text-field>
+        <input type="text"  class="mdc-text-field__input" ng-model="contas.form.dataVencimento" required>
+        <label class="mdc-floating-label">Data de Vencimento</label>
+        <div class="mdc-line-ripple"></div>
+      </div>
+    </div>
+
+    <div class="mdc-form-field">
+      <div class="mdc-text-field mdc-text-field--box mdc-text-field--with-trailing-icon mdc-text-field--fullwidth" mdc-text-field>
+        <input type="text"  class="mdc-text-field__input" ng-model="contas.form.dataPagamento" required>
+        <label class="mdc-floating-label">Data de Pagamento</label>
+        <div class="mdc-line-ripple"></div>
+      </div>
+    </div>
+
+
+    <div class="mdc-form-field">
+      <div class="mdc-text-field mdc-text-field--box mdc-text-field--with-trailing-icon mdc-text-field--fullwidth" mdc-text-field>
+        <input type="text"  class="mdc-text-field__input" ng-model="contas.form.valorOriginal" required>
+        <label class="mdc-floating-label">Valor</label>
+        <div class="mdc-line-ripple"></div>
+      </div>
+    </div>
+
+    <div class="mdc-form-field">
+      <button class="mdc-button mdc-button--raised mdc-button-login" ng-disabled="form.$invalid" ng-click="contas.add()">Adicionar</button>
+    </div>
+  </form>
+
+  <br/>
+  <!-- <code>
+    {{contas.form}}
+  </code> -->
+</main>

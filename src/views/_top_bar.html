@@ -1,0 +1,39 @@
+<!-- TOPBAR START -->
+<header class="mdc-top-app-bar mdc-top-app-bar--fixed mdc-elevation--z4" ng-controller="TopBarController as topBar" mdc-top-app-bar>
+	<div class="mdc-top-app-bar__row mdc-top-app-bar__default">
+		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+			<button class="mdc-action-menu material-icons mdc-top-app-bar__navigation-icon" ng-click="topBar.openDrawer()">menu</button>
+			<span class="mdc-top-app-bar__title">{{ $state.current.title }}</span>
+		</section>
+		<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+			<button class="material-icons mdc-top-app-bar__action-item" aria-label="Buscar" alt="Buscar" ng-click="topBar.openSearch()">search</button>
+      <button class="material-icons mdc-top-app-bar__action-item" aria-label="Mais" alt="Mais" ng-click="topBar.openMenu()">more_vert</button>
+      <div class="mdc-menu menu-status" tabindex="-1">
+        <ul class="mdc-menu__items mdc-list" role="menu" aria-hidden="true">
+          <li class="mdc-list-item" role="menuitem" mdc-ripple>Hoje</li>
+          <li class="mdc-list-item" role="menuitem" mdc-ripple>Ontem</li>
+          <li class="mdc-list-item" role="menuitem" mdc-ripple>Últimos 7 dias</li>
+          <li class="mdc-list-item" role="menuitem" mdc-ripple>Personalizado</li>
+        </ul>
+      </div>
+		</section>
+  </div>
+  
+  <div class="search-top-bar mdc-top-app-bar__row mdc-top-app-bar__search ng-hide bg-white">
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+        <button class="material-icons mdc-top-app-bar__navigation-icon black" ng-click="topBar.openSearch()">&#xE5C4;</button>
+
+        <div class="mdc-text-field mdc-text-field--outlined mdc-text-field--fullwidth mdc-text-field--dense bg-white" mdc-text-field>
+          <input type="text" ng-model="topBar.search" ng-change="topBar.onSearchChange()" class="mdc-text-field__input" placeholder="Pesquisar">
+        </div>
+
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+          <button class="material-icons mdc-top-app-bar__navigation-icon black" aria-label="Buscar" alt="Buscar">search</button>
+        </section>
+
+      </section>
+    </section>
+  </div>
+</header>
+<!-- TOPBAR END -->
